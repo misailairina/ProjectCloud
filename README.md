@@ -56,7 +56,8 @@ Mai jos sunt prezentate metodele HTTP echivalente pentru operațiile din aplica�
 •	Funcție în cod: addNote
 •	Descriere: Creează o notiță nouă în baza de date cu titlu, descriere și data creării.
 •	Echivalent HTTP: POST /notesCod relevant:
- ![image](https://github.com/user-attachments/assets/f4d7dc66-52ee-48c4-9352-e1c63a4d88e9)
+![image](https://github.com/user-attachments/assets/da1a8962-74a4-422b-ae37-ceb93854e42b)
+
 
 Explicație:
 •	Se creează o referință în baza de date notesRef la nodul "notes".
@@ -68,7 +69,7 @@ Explicație:
 •	Funcție: useEffect cu onValue pe referința notes
 •	Descriere: Primește în timp real toate notițele salvate în baza de date, ordonate după data creării (ultimele apar primele).
 •	Metoda HTTP echivalentă: GET /notes
- ![image](https://github.com/user-attachments/assets/4324adc5-9a22-44c4-92dd-0961b81e6383)
+![image](https://github.com/user-attachments/assets/8b3fa0c2-2ac6-49ff-9087-0a28753d9351)
 
 Explicație:
 •	Se creează o referință la nodul "notes" în baza de date Firebase.
@@ -80,8 +81,7 @@ Explicație:
 •	Funcție în cod: updateNote
 •	Descriere: Actualizează titlul și descrierea unei notițe existente în baza de date.
 •	Echivalent HTTP: PUT /notes/:id
- ![image](https://github.com/user-attachments/assets/88e237be-a239-4c00-a99d-d63b42512c51)
-
+![image](https://github.com/user-attachments/assets/a2d33bcb-420a-41e6-9d4f-864101d13239)
 Explicație:
 •	Se actualizează nodul corespunzător notiței cu ID-ul id folosind referința notes/${id}.
 •	Metoda update() modifică doar câmpurile trimise (title, description).
@@ -91,7 +91,7 @@ Explicație:
 •	Funcție în cod: deleteNote
 •	Descriere: Șterge o notiță din baza de date folosind ID-ul său.
 •	Echivalent HTTP: DELETE /notes/:id
-![image](https://github.com/user-attachments/assets/aa029b97-21c9-4f2f-b116-75b656a92ca5)
+![image](https://github.com/user-attachments/assets/15e31813-80de-4de4-928a-283666bee17d)
 
 
 Explicație:
@@ -103,18 +103,18 @@ Explicație:
 •	Funcție în cod: moveNote
 •	Descriere: Mută o notiță în lista locală de notițe mutând poziția între indexuri.
 •	Echivalent HTTP: Nu există un echivalent HTTP direct (operațiune locală în UI).
-![image](https://github.com/user-attachments/assets/b7a9dcd9-84be-43df-99d7-6e4ee8f268ec)
+![image](https://github.com/user-attachments/assets/23f1e860-10ab-44cd-b531-0b2330886e71)
 
 Explicație:
 •	Manipularea array-ului local de notițe pentru a schimba ordinea.
 •	Această operațiune nu este sincronizată direct cu baza de date Firebase, deci nu implică un request HTTP.
 
 5. Capturi ecran aplicație
-![image](https://github.com/user-attachments/assets/003daf75-0438-4724-b6c5-cbf8ebb008d2)
-![image](https://github.com/user-attachments/assets/5a72a953-e622-4818-b675-a08d486e4e52)
-![image](https://github.com/user-attachments/assets/43202916-84f0-4db4-92bd-1590f1aa762a)
-![image](https://github.com/user-attachments/assets/9342d868-5526-44da-8237-257592f8c031)
-
+![image](https://github.com/user-attachments/assets/f6e2ff65-128c-4c44-a21e-c68ad7e2a1b8)
+![image](https://github.com/user-attachments/assets/138782d1-765e-46b1-ad35-5c81b3ff299d)
+![image](https://github.com/user-attachments/assets/b2bdf3f5-62aa-4588-92ef-296e3e150e67)
+![image](https://github.com/user-attachments/assets/51b24f10-5eaf-4084-ad30-2282560fb989)
+![image](https://github.com/user-attachments/assets/34d97645-3344-44a1-818e-5bc8eb8e2935)
 
 6.	Referințe
 •	Google Firebase Documentation. Firebase Realtime Database https://firebase.google.com/docs/database
