@@ -17,8 +17,11 @@ Aplicație web pentru trimiterea și afișarea de mesaje
 
 Misaila Irina-Madalina
 Grupa 1133
+
 Link-uri utile
+
 Link video prezentare proiect: https://youtu.be/rFJczH_tahQ
+
 Link publicare aplicație: https://project-cloud-pied.vercel.app/
 
 1. Introducere
