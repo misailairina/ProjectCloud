@@ -1,0 +1,156 @@
+h1 {
+  text-align: center;
+  margin-bottom: 1rem; 
+  font-weight: 700;  
+  font-size: 3rem;  
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f7;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 900px;
+  max-width: 95%;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Daca nu exista mesaje, centram formularul pe orizontala si verticala */
+.container.empty {
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+/* Formularul */
+.note-form {
+  flex: 1;
+  max-width: 300px;
+  background-size: cover;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  backdrop-filter: blur(5px); /* Optional: estompează fundalul pentru lizibilitate */
+}
+
+.note-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8); /* fundal parțial alb pt lizibilitate */
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.note-form input,
+.note-form textarea {
+  width: 85%;
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px #4a90e2aa;
+}
+
+.note-form .buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.note-form button {
+  background-color: #4a90e2;
+  border: none;
+  color: white;
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.note-form button:hover {
+  background-color: #357ABD;
+}
+
+/* Lista mesajelor */
+.note-list {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.note-box {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.note-box:last-child {
+  margin-bottom: 0;
+}
+
+.note-box:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.note-box h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.note-box p {
+  margin: 0 0 12px 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Asigură-te că mesajele din BackgroundMessages sunt absolute și stau în spate */
+.background-messages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* să nu interfereze cu click-urile */
+  z-index: 0;
+}
+
+/* Containerul principal și titlul au z-index mai mare să fie peste mesaje */
+.container, h1 {
+  position: relative;
+  z-index: 10;
+}
